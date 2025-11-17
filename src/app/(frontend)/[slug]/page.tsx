@@ -53,7 +53,7 @@ export default async function Page({ params: paramsPromise }: Args) {
     slug: decodedSlug,
   })
 
-  console.log(`Testing Page 🚧🚧🚧`);
+  console.log(`Testing Page 🚧🚧🚧🚧🚧`);
 
 
   if (!page) return <PayloadRedirects url={url} />
