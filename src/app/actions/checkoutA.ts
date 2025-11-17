@@ -49,7 +49,9 @@ export async function checkoutA(cartItems: string[], formData: CartSchemaT) {
   const cart = await createCart(lineItems, attributes, formData.email)
 
   if (cart?.checkoutUrl) {
-    redirect(cart.checkoutUrl)
+    return { error: true, message: '🚧🚧🚧 Test repo - cart creation blocked' }
+
+    redirect(cart!.checkoutUrl)
   } else {
     console.log(`❌ Uncaught error in checkout`)
     return { error: true, message: 'Coś poszło nie tak' }

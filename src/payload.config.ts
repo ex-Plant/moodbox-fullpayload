@@ -25,9 +25,28 @@ const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
 if (!process.env.BLOB_READ_WRITE_TOKEN) {
-  throw new Error(`❌ missing token`)
-} else {
-  console.log(`✅`)
+  throw new Error(`❌ missing BLOB_READ_WRITE_TOKEN token`)
+}
+
+if (!process.env.PAYLOAD_SECRET) {
+  throw new Error(`❌ missing PAYLOAD_SECRET token`)
+}
+
+if (!process.env.EMAIL_USER) {
+  throw new Error(`❌ missing EMAIL_USER token`)
+}
+
+
+if (!process.env.EMAIL_PASS) {
+  throw new Error(`❌ missing EMAIL_PASS token`)
+}
+
+if (!process.env.EMAIL_HOST) {
+  throw new Error(`❌ missing EMAIL_HOST token`)
+}
+
+if (!process.env.CRON_SECRET) {
+  throw new Error(`❌ missing CRON_SECRET token`)
 }
 
 export default buildConfig({
